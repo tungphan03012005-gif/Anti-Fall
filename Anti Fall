@@ -1,0 +1,18 @@
+-- [[ Rscripts Risk Notice ]]
+-- This script is not verified by rscripts.net. Deal with caution.
+--
+-- Stay safe:
+--   • Never log in on unofficial Roblox sites or lookalike domains.
+--   • Real Roblox links use roblox.com (check the .com ending).
+--   • Treat fake Roblox login / "claim reward" pages as phishing.
+-- [[ End Rscripts Risk Notice ]]
+
+local RemoteConfigClient = require(game:GetService("ReplicatedStorage").ClientSystems.RemoteConfigClient.RemoteConfigClient)
+local config = RemoteConfigClient.Get(true)
+
+if config and config.Shared and config.Shared.DamageConfig then
+    config.Shared.DamageConfig.FallDamageMinDistance = math.huge
+    config.Shared.DamageConfig.FallDamageMinSpeed = math.huge
+    config.Shared.DamageConfig.FallDamageMaxSpeed = math.huge
+    config.Shared.DamageConfig.FallDamageRagdollThreshold = math.huge
+end
